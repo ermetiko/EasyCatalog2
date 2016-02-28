@@ -1,0 +1,255 @@
+[
+    {
+        "outputFile": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 47,
+                    "endOffset": 98
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 103,
+                    "endColumn": 43,
+                    "endOffset": 142
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 147,
+                    "endColumn": 40,
+                    "endOffset": 183
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\dimens.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 188,
+                    "endColumn": 48,
+                    "endOffset": 232
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 237,
+                    "endColumn": 82,
+                    "endOffset": 315
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 320,
+                    "endColumn": 49,
+                    "endOffset": 365
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 370,
+                    "endColumn": 54,
+                    "endOffset": 420
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 425,
+                    "endColumn": 51,
+                    "endOffset": 472
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 477,
+                    "endColumn": 53,
+                    "endOffset": 526
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 531,
+                    "endColumn": 53,
+                    "endOffset": 580
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 585,
+                    "endColumn": 63,
+                    "endOffset": 644
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 649,
+                    "endColumn": 54,
+                    "endOffset": 699
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 704,
+                    "endColumn": 48,
+                    "endOffset": 748
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 753,
+                    "endColumn": 48,
+                    "endOffset": 797
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 802,
+                    "endColumn": 46,
+                    "endOffset": 844
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\strings.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 849,
+                    "endLine": 23,
+                    "endColumn": 12,
+                    "endOffset": 1129
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1134,
+                    "endLine": 28,
+                    "endColumn": 12,
+                    "endOffset": 1461
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\styles.xml"
+                }
+            },
+            {
+                "to": {
+                    "startLine": 29,
+                    "startColumn": 4,
+                    "startOffset": 1466,
+                    "endLine": 33,
+                    "endColumn": 9,
+                    "endOffset": 1727
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 1,
+                        "startOffset": 1465,
+                        "endLine": 36,
+                        "endColumn": 9,
+                        "endOffset": 1731
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 34,
+                    "startColumn": 4,
+                    "startOffset": 1732,
+                    "endLine": 43,
+                    "endColumn": 12,
+                    "endOffset": 2256
+                },
+                "from": {
+                    "file": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 1,
+                        "startOffset": 918,
+                        "endLine": 30,
+                        "endColumn": 12,
+                        "endOffset": 1451
+                    }
+                }
+            }
+        ]
+    }
+]

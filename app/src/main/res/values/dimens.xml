@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="TextSizeHeaderSx">15sp</dimen>
+    <dimen name="text_size">10sp</dimen>
+    <dimen name="dimCategorie">12sp</dimen>
+</resources>

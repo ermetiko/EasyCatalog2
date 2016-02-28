@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\drawable-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\action_search.png",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\drawable-ldpi\\action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\shopping.png",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\drawable-ldpi\\shopping.png"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi-v4\\navigation_refresh.png",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\drawable-ldpi\\navigation_refresh.png"
+    }
+]

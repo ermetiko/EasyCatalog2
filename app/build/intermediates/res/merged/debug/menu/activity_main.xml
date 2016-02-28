@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/menu_settings"/>
+    <item
+        android:id="@+id/menu_importaAggiornamenti"
+        android:orderInCategory="10"
+        android:icon="@drawable/navigation_refresh"
+        android:title="Importa"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/menu_cerca"
+        android:orderInCategory="9"
+        android:icon="@drawable/action_search"
+        android:title="Cerca"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/menu_carrello"
+        android:orderInCategory="8"
+        android:icon="@drawable/shopping"
+        android:title="Aggiungi al carrello"
+        android:showAsAction="always" />
+    <item
+        android:id="@+id/menu_record"
+        android:orderInCategory="7"
+        android:enabled="false"
+        android:actionLayout="@layout/menucontatore"
+        android:showAsAction="always" />
+    
+</menu>

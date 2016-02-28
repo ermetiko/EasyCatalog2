@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">EasyCatalog</string>
+    <string name="menu_settings">Impostazioni</string>
+    <string name="headerFornitore">Fornitore</string>
+	<string name="headerCategoria">Categoria</string>    
+	<string name="headerSottocategoria">Sottocategoria</string>    
+	<string name="tabCatalogo">Catalogo</string>    
+	<string name="tabOfferte">Offerte</string>    
+	<string name="tabCarrello">Carrello</string>    
+	<string name="ftpUrl">ftp.elfosoftware.it</string>
+	<string name="ftpFolder">/elfosoftware.it/downloads/testordini/update</string>
+	<string name="ftpUser">293169@aruba.it</string>
+	<string name="ftpPassword">nokatono0</string>
+</resources>
