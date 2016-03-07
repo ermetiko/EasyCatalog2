@@ -93,25 +93,33 @@ public class ListaCatalogo extends Fragment {
 	private ArrayList<Articolo> leggiArticoli(int idFornitore, int idcategoria, int idSottocategoria)
 	{
 		ArrayList<Articolo> articoli = new ArrayList<Adapters.Articolo>();
-		SQLiteDatabase db = main.databaseHelper.getReadableDatabase();
-		Cursor crs = ArticoliDB.getArticoli(db, idFornitore, idcategoria, idSottocategoria);
-		//main.mnuRecordCount.setTitle(Integer.toString(crs.getCount()));	    
-		TextView  tv = (TextView)main.findViewById(R.id.mnuContatore);
-		tv.setText(Integer.toString(crs.getCount())+" ");		
-		int cnt=0;
+		SQLiteDatabase db=null;
+		Cursor crs=null;
 		try
 		{
+			db = main.databaseHelper.getReadableDatabase();
+			crs = ArticoliDB.getArticoli(db, idFornitore, idcategoria, idSottocategoria);
+			//main.mnuRecordCount.setTitle(Integer.toString(crs.getCount()));
+			TextView  tv = (TextView)main.findViewById(R.id.mnuContatore);
+			tv.setText(Integer.toString(crs.getCount())+" ");
+			int cnt=0;
 			while (crs.moveToNext())
 			{
 				int idArticolo = crs.getInt(0);
 				articoli.add(new Adapters.Articolo(idArticolo , crs.getString(1),  (cnt++ <100 ? Adapters.getImmagine(idArticolo, true):null), null));
 			}
 		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		finally
 		{
-			crs.close();
-			db.close();
+			if (crs!=null)
+				crs.close();
+			if ((db!=null) && db.isOpen())
+				db.close();
 		}
+
 		return articoli;
 		//griglia.setAdapter(new Adapters.ThumbsAdapter(main, R.layout.thumb, articoli));
 	}	
@@ -142,17 +150,19 @@ public class ListaCatalogo extends Fragment {
 		}						
 	}	
 
-	public void caricaFornitori()
+	public boolean caricaFornitori()
 	{
+		boolean ok=true;
 		ArrayList<Adapters.Categoria> listaFornitori = new ArrayList<Adapters.Categoria>();
-		//listaFornitori.add(new Adapters.Categoria(0, " Tutti i fornitori", (int) (Math.random()*100)));
-		SQLiteDatabase db = main.databaseHelper.getReadableDatabase();
-
-		Cursor crs = FornitoriDB.getFornitoriJoin(db);
-		//Cursor crs = FornitoriDB.getAllFornitori(db);
+		SQLiteDatabase db=null;
+		Cursor crs=null;
 		int totale=0;
 		try
 		{
+			//listaFornitori.add(new Adapters.Categoria(0, " Tutti i fornitori", (int) (Math.random()*100)));
+			db = main.databaseHelper.getReadableDatabase();
+			crs = FornitoriDB.getFornitoriJoin(db);
+			//Cursor crs = FornitoriDB.getAllFornitori(db);
 			while (crs.moveToNext())
 			{
 				int arti = crs.getInt(2);
@@ -161,28 +171,38 @@ public class ListaCatalogo extends Fragment {
 			}
 			//listaFornitori.add(new Adapters.Categoria(crs.getInt(0), crs.getString(1), (int) (Math.random()*100)));
 		}
+		catch(Exception e) {
+			ok=false;
+			System.out.println(e.getMessage());
+		}
 		finally
 		{
-			crs.close();
-			db.close();
+			if (crs!=null)
+				crs.close();
+			if ((db!=null) && db.isOpen())
+				db.close();
 		}
-		listaFornitori.add(0, new Adapters.Categoria(0, " Tutti i fornitori", totale));
+		if (totale>0)
+			listaFornitori.add(0, new Adapters.Categoria(0, " Tutti i fornitori", totale));
 		Adapters.BigSpinnerAdapter adpMarche = new Adapters.BigSpinnerAdapter(main, R.layout.categorie, listaFornitori);
 		spnMarche.setAdapter(adpMarche);
+		return ok;
 	}
 
 
 	private void caricaCategorie(Spinner spn)
 	{
 		ArrayList<Adapters.Categoria> listaCategorie = new ArrayList<Adapters.Categoria>();
-		SQLiteDatabase db = main.databaseHelper.getReadableDatabase();
-		int idFornitore = ((Adapters.Categoria)spnMarche.getSelectedItem()).Id;
-		Cursor crs = CategorieArticoliDB.getCategorieJoin(db, idFornitore);
-		//Cursor crs = CategorieArticoliDB.getAllCategorieByPadre(db, 1);
-		//int numCategorie = crs.getCount();
-		//int totale=0;
+		SQLiteDatabase db=null;
+		Cursor crs=null;
 		try
 		{
+			db = main.databaseHelper.getReadableDatabase();
+			int idFornitore = ((Adapters.Categoria)spnMarche.getSelectedItem()).Id;
+			crs = CategorieArticoliDB.getCategorieJoin(db, idFornitore);
+			//Cursor crs = CategorieArticoliDB.getAllCategorieByPadre(db, 1);
+			//int numCategorie = crs.getCount();
+			//int totale=0;
 			while (crs.moveToNext())
 			{
 				int arti = crs.getInt(2);
@@ -191,10 +211,15 @@ public class ListaCatalogo extends Fragment {
 			}
 			//listaCategorie.add(new Adapters.Categoria(crs.getInt(0), crs.getString(1), 1));
 		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		finally
 		{
-			crs.close();
-			db.close();
+			if (crs!=null)
+				crs.close();
+			if ((db!=null) && db.isOpen())
+				db.close();
 		}
 		//if ((idFornitore!=0) && (numCategorie>1))
 		//	listaCategorie.add(0, new Adapters.Categoria(0, " Tutte le categorie", totale));
@@ -206,15 +231,17 @@ public class ListaCatalogo extends Fragment {
 	private void caricaSottocategorie(int idFornitore, int idCategoria)
 	{
 		ArrayList<Adapters.Categoria> listaCategorie = new ArrayList<Adapters.Categoria>();
-		//listaCategorie.add(  new Adapters.Categoria(0, " Tutte le sottocategorie", (int) (Math.random()*100)));
-		SQLiteDatabase db = main.databaseHelper.getReadableDatabase();
-		Cursor crs = CategorieArticoliDB.getSottocategorieJoin(db, idFornitore, idCategoria);
-		int numSottocategorie = crs.getCount();
-		//Cursor crs = CategorieArticoliDB.getAllCategorieByPadre(db, idCategoria);
-
+		SQLiteDatabase db=null;
+		Cursor crs=null;
 		int totale=0;
+		int numSottocategorie=0;
 		try
 		{
+		//listaCategorie.add(  new Adapters.Categoria(0, " Tutte le sottocategorie", (int) (Math.random()*100)));
+			db = main.databaseHelper.getReadableDatabase();
+			crs = CategorieArticoliDB.getSottocategorieJoin(db, idFornitore, idCategoria);
+			numSottocategorie = crs.getCount();
+			//Cursor crs = CategorieArticoliDB.getAllCategorieByPadre(db, idCategoria);
 			while (crs.moveToNext())
 			{
 				int arti=crs.getInt(2);
@@ -223,10 +250,15 @@ public class ListaCatalogo extends Fragment {
 				//listaCategorie.add(  new Adapters.Categoria(crs.getInt(0), crs.getString(1), (int) (Math.random()*100)));
 			}
 		}
+		catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
 		finally
 		{
-			crs.close();
-			db.close();
+			if (crs!=null)
+				crs.close();
+			if ((db!=null) && db.isOpen())
+				db.close();
 		}
 		if (((idFornitore!=0) && (numSottocategorie>1)) || (numSottocategorie==0))
 			listaCategorie.add(0, new Adapters.Categoria(0, " Tutte le sottocategorie", totale));

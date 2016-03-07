@@ -48,6 +48,13 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
     
+	public boolean exitsDataBaseFile() {
+		String myPath = DB_PATH + NOME_DB;
+		File file = new File(myPath);
+		return file.exists();
+	}
+
+
     private boolean existDataBase(){
     	SQLiteDatabase checkDB = null;
     	try{

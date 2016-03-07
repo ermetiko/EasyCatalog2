@@ -26,9 +26,26 @@ public class MainActivity extends Activity implements ListaCatalogo.OnSottocateg
     public DBHelper databaseHelper;
     public ArrayList<Articolo> listaArticoli;
 	private int stato=0;
+	private boolean caricato=false;
 	
     //public MenuItem mnuRecordCount = null;
-     
+	@Override
+    protected void onResume() {
+		super.onResume();
+		if (!caricato)
+		{
+			caricato=true;
+			if (!databaseHelper.exitsDataBaseFile()){
+				//copia il db
+				String[] listaFiles = new String[] {"easycatalog.zip"};
+				Updater upd = new Updater();
+				if (upd.scaricaFileFtp(this, listaFiles))
+				{
+				}
+			}
+		}
+	}
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -40,8 +57,8 @@ public class MainActivity extends Activity implements ListaCatalogo.OnSottocateg
 		FragmentTransaction ft = getFragmentManager().beginTransaction();
 		ft.add(R.id.fragmentlista, frgLista);
 		ft.add(R.id.fragmentgriglia, fragment);
-		ft.commit();		
-		
+		ft.commit();
+
 		databaseHelper = new DBHelper(this);
 		if (databaseHelper.createDataBase())
 		{

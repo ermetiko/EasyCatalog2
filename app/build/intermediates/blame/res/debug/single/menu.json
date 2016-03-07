@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main.xml",
+        "source": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\src\\main\\res\\menu\\activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main.xml",
         "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\menu\\activity_main.xml"
     }
