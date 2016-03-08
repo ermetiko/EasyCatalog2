@@ -29,6 +29,7 @@ public class MainActivity extends Activity implements ListaCatalogo.OnSottocateg
 	private boolean caricato=false;
 	
     //public MenuItem mnuRecordCount = null;
+	/*
 	@Override
     protected void onResume() {
 		super.onResume();
@@ -45,6 +46,7 @@ public class MainActivity extends Activity implements ListaCatalogo.OnSottocateg
 			}
 		}
 	}
+	*/
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -266,4 +268,5 @@ public class MainActivity extends Activity implements ListaCatalogo.OnSottocateg
     	builder.setNeutralButton("OK", null);
     	builder.create().show();    	
 	}
+
 }

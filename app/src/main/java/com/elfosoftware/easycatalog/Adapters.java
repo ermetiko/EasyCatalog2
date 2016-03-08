@@ -174,7 +174,6 @@ public class Adapters {
 				itemHolder.img = (ImageView) v.findViewById(R.id.immagineLarge);
 				
 				//itemHolder.img.setLayoutParams(new LayoutParams(dimensioneGrigliaGrande, dimensioneGrigliaGrande));
-				
 				itemHolder.codice = (TextView) v.findViewById(R.id.imgCodiceArticolo);
 				itemHolder.nome = (TextView) v.findViewById(R.id.imgDescrizioneArticolo);
 				itemHolder.categoria = (TextView) v.findViewById(R.id.imgCategoria);
@@ -201,11 +200,11 @@ public class Adapters {
 	public static Drawable getImmagine(int idArticolo, boolean ridotta)
 	{
 		Drawable img=null;
-		/*
+
 		int numero = (int)Math.ceil(Math.random()*79);
 		String nomeFile =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(numero+1) + (ridotta?  "_th.jpg":".jpg");
-		*/
-		String nomeFile =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(idArticolo) + (ridotta?  "_th.jpg":".jpg");
+
+		//String nomeFile =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(idArticolo) + (ridotta?  "_th.jpg":".jpg");
 
 		File file = new File (nomeFile);
 		if (file.exists())
