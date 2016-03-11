@@ -19,203 +19,204 @@ import android.widget.TextView;
 
 public class Adapters {
 
-	//public static int dimensioneGrigliaGrande=0;
-	
-	public static class Categoria {
-		int Id;
-		String Nome;
-		Integer Articoli;
+    //public static int dimensioneGrigliaGrande=0;
 
-		public Categoria(int id, String nome, Integer numero) {
-			Id = id;
-			Nome = nome;
-			Articoli = numero;
-		}
+    public static class Categoria {
+        int Id;
+        String Nome;
+        Integer Articoli;
 
-		@Override
-		public String toString() {
-			return this.Nome;
-		}
-	}
-	
-	
-	public static class CategorieAdapter extends ArrayAdapter<Categoria> {
-		private ArrayList<Categoria> items;
-		private CategoriaHolder categoriaHolder;
-		private Context context;
+        public Categoria(int id, String nome, Integer numero) {
+            Id = id;
+            Nome = nome;
+            Articoli = numero;
+        }
 
-		private class CategoriaHolder {
-			TextView nome;
-			TextView numero;
-		}
+        @Override
+        public String toString() {
+            return this.Nome;
+        }
+    }
 
-		public CategorieAdapter(Context context, int tvResId, ArrayList<Categoria> items) {
-			super(context, tvResId, items);
-			this.context = context;
-			this.items = items;
-		}
-		
-		@Override
-		public View getView(int pos, View convertView, ViewGroup parent) {
-			View v = convertView;
-			if (v == null) {
-				LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				v = vi.inflate(R.layout.categorie, null);
-				categoriaHolder = new CategoriaHolder();
-				categoriaHolder.nome = (TextView) v.findViewById(R.id.nomeCategoria);
-				categoriaHolder.numero = (TextView) v.findViewById(R.id.articoliCategoria);
-				v.setTag(categoriaHolder);
-			} else
-				categoriaHolder = (CategoriaHolder) v.getTag();
 
-			Categoria cate = items.get(pos);
+    public static class CategorieAdapter extends ArrayAdapter<Categoria> {
+        private ArrayList<Categoria> items;
+        private CategoriaHolder categoriaHolder;
+        private Context context;
 
-			if (cate != null) {
-				categoriaHolder.nome.setText(cate.Nome);
-				categoriaHolder.numero.setText(Integer.toString(cate.Articoli)
-						+ " articoli");
-			}
+        private class CategoriaHolder {
+            TextView nome;
+            TextView numero;
+        }
 
-			return v;
-		}
-	}
+        public CategorieAdapter(Context context, int tvResId, ArrayList<Categoria> items) {
+            super(context, tvResId, items);
+            this.context = context;
+            this.items = items;
+        }
 
-	public static class Articolo {
-		int Id;
-		String Descrizione;
-		String Categoria;
-		String Famiglia;
-		String Fornitore;
-		Drawable Thumb;
-		Drawable Immagine;
-		
+        @Override
+        public View getView(int pos, View convertView, ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.categorie, null);
+                categoriaHolder = new CategoriaHolder();
+                categoriaHolder.nome = (TextView) v.findViewById(R.id.nomeCategoria);
+                categoriaHolder.numero = (TextView) v.findViewById(R.id.articoliCategoria);
+                v.setTag(categoriaHolder);
+            } else
+                categoriaHolder = (CategoriaHolder) v.getTag();
 
-		public Articolo(int id, String descrizione, Drawable thumb, Drawable immagine ) {
-			Id = id;
-			Descrizione = descrizione;
-			Thumb = thumb;
-			Immagine = immagine;
-		}
+            Categoria cate = items.get(pos);
 
-		@Override
-		public String toString() {
-			return this.Descrizione;
-		}
-	}
+            if (cate != null) {
+                categoriaHolder.nome.setText(cate.Nome);
+                categoriaHolder.numero.setText(Integer.toString(cate.Articoli)
+                        + " articoli");
+            }
 
-	public static class ThumbsAdapter extends ArrayAdapter<Articolo> {
-		private ArrayList<Articolo> items;
-		private ItemHolder itemHolder;
-		private Context context;
+            return v;
+        }
+    }
 
-		private class ItemHolder {
-			ImageView img;
-			TextView nome;
-		}
+    public static class Articolo {
+        int Id;
+        String Descrizione;
+        String Categoria;
+        String Famiglia;
+        String Fornitore;
+        Drawable Thumb;
+        Drawable Immagine;
 
-		public ThumbsAdapter(Context context, int tvResId, ArrayList<Articolo> items) {
-			super(context, tvResId, items);
-			this.context = context;
-			this.items = items;
-		}
-		
-		@Override
-		public View getView(int pos, View convertView, ViewGroup parent) {
-			View v = convertView;
-			if (convertView == null) {
-				LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				v = vi.inflate(R.layout.thumb, null);
-				itemHolder = new ItemHolder();
-				itemHolder.img = (ImageView) v.findViewById(R.id.thumbImmagine);
-				itemHolder.nome = (TextView) v.findViewById(R.id.thumbDescrizione);
-				v.setTag(itemHolder);
-			} else
-				itemHolder = (ItemHolder) convertView.getTag();
 
-			Articolo arti = items.get(pos);
-			if (arti != null) {
-				
-				if (arti.Thumb==null)
-					arti.Thumb= getImmagine(arti.Id, true);
-				itemHolder.img.setImageDrawable(arti.Thumb);
-				itemHolder.nome.setText(arti.Descrizione);
-			}
-			return v;
-		}
-	}
-	
-	
-	public static class ImmagineLargeAdapter extends ArrayAdapter<Articolo> {
-		private ArrayList<Articolo> items;
-		private ItemHolder itemHolder;
-		private Context context;
+        public Articolo(int id, String descrizione, Drawable thumb, Drawable immagine) {
+            Id = id;
+            Descrizione = descrizione;
+            Thumb = thumb;
+            Immagine = immagine;
+        }
 
-		private class ItemHolder {
-			ImageView img;
-			TextView codice;
-			TextView nome;
-			TextView categoria;
-			TextView sottocategoria;
-		}
+        @Override
+        public String toString() {
+            return this.Descrizione;
+        }
+    }
 
-		public ImmagineLargeAdapter(Context context, int tvResId, ArrayList<Articolo> items) {
-			super(context, tvResId, items);
-			this.context = context;
-			this.items = items;
-		}
-		
-		@Override
-		public View getView(int pos, View convertView, ViewGroup parent) {
-			View v = convertView;
-			if (convertView == null) {
-				LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				v = vi.inflate(R.layout.immagine_large, null);
-				itemHolder = new ItemHolder();
-				itemHolder.img = (ImageView) v.findViewById(R.id.immagineLarge);
-				
-				//itemHolder.img.setLayoutParams(new LayoutParams(dimensioneGrigliaGrande, dimensioneGrigliaGrande));
-				itemHolder.codice = (TextView) v.findViewById(R.id.imgCodiceArticolo);
-				itemHolder.nome = (TextView) v.findViewById(R.id.imgDescrizioneArticolo);
-				itemHolder.categoria = (TextView) v.findViewById(R.id.imgCategoria);
-				itemHolder.sottocategoria = (TextView) v.findViewById(R.id.imgSottocategoria);
-				v.setTag(itemHolder);
-			} else
-				itemHolder = (ItemHolder) convertView.getTag();
+    public static class ThumbsAdapter extends ArrayAdapter<Articolo> {
+        private ArrayList<Articolo> items;
+        private ItemHolder itemHolder;
+        private Context context;
+        private File immaginiPath;
 
-			Articolo arti = items.get(pos);
-			if (arti != null) {
-				
-				if (arti.Immagine==null)
-					arti.Immagine= getImmagine(arti.Id, false);
-				itemHolder.img.setImageDrawable(arti.Immagine);
-				itemHolder.codice.setText(Integer.toString(arti.Id));
-				itemHolder.nome.setText(arti.Descrizione);
-				itemHolder.categoria.setText("categoria");
-				itemHolder.sottocategoria.setText("Sottocategoria");
-			}
-			return v;
-		}
-	}
-	
-	public static Drawable getImmagine(int idArticolo, boolean ridotta)
-	{
-		Drawable img=null;
+        private class ItemHolder {
+            ImageView img;
+            TextView nome;
+        }
 
-		int numero = (int)Math.ceil(Math.random()*79);
-		String nomeFile =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(numero+1) + (ridotta?  "_th.jpg":".jpg");
+        public ThumbsAdapter(Context context, int tvResId, ArrayList<Articolo> items, File immaginiPath) {
+            super(context, tvResId, items);
+            this.context = context;
+            this.items = items;
+            this.immaginiPath = immaginiPath;
+        }
 
-		//String nomeFile =  Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(idArticolo) + (ridotta?  "_th.jpg":".jpg");
+        @Override
+        public View getView(int pos, View convertView, ViewGroup parent) {
+            View v = convertView;
+            if (convertView == null) {
+                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.thumb, null);
+                itemHolder = new ItemHolder();
+                itemHolder.img = (ImageView) v.findViewById(R.id.thumbImmagine);
+                itemHolder.nome = (TextView) v.findViewById(R.id.thumbDescrizione);
+                v.setTag(itemHolder);
+            } else
+                itemHolder = (ItemHolder) convertView.getTag();
 
-		File file = new File (nomeFile);
-		if (file.exists())
-		{
-			img= Drawable.createFromPath(file.getAbsolutePath());
-		}
-		return img;
-	}
-	
+            Articolo arti = items.get(pos);
+            if (arti != null) {
+
+                if (arti.Thumb == null)
+                    arti.Thumb = getImmagine(arti.Id, true, immaginiPath);
+                itemHolder.img.setImageDrawable(arti.Thumb);
+                itemHolder.nome.setText(arti.Descrizione);
+            }
+            return v;
+        }
+    }
+
+    public static class ImmagineLargeAdapter extends ArrayAdapter<Articolo> {
+        private ArrayList<Articolo> items;
+        private ItemHolder itemHolder;
+        private Context context;
+        private File immaginiPath;
+
+        private class ItemHolder {
+            ImageView img;
+            TextView codice;
+            TextView nome;
+            TextView categoria;
+            TextView sottocategoria;
+        }
+
+        public ImmagineLargeAdapter(Context context, int tvResId, ArrayList<Articolo> items, File immaginiPath) {
+            super(context, tvResId, items);
+            this.context = context;
+            this.items = items;
+            this.immaginiPath = immaginiPath;
+        }
+
+        @Override
+        public View getView(int pos, View convertView, ViewGroup parent) {
+            View v = convertView;
+            if (convertView == null) {
+                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.immagine_large, null);
+                itemHolder = new ItemHolder();
+                itemHolder.img = (ImageView) v.findViewById(R.id.immagineLarge);
+
+                //itemHolder.img.setLayoutParams(new LayoutParams(dimensioneGrigliaGrande, dimensioneGrigliaGrande));
+                itemHolder.codice = (TextView) v.findViewById(R.id.imgCodiceArticolo);
+                itemHolder.nome = (TextView) v.findViewById(R.id.imgDescrizioneArticolo);
+                itemHolder.categoria = (TextView) v.findViewById(R.id.imgCategoria);
+                itemHolder.sottocategoria = (TextView) v.findViewById(R.id.imgSottocategoria);
+                v.setTag(itemHolder);
+            } else
+                itemHolder = (ItemHolder) convertView.getTag();
+
+            Articolo arti = items.get(pos);
+            if (arti != null) {
+
+                if (arti.Immagine == null)
+                    arti.Immagine = getImmagine(arti.Id, false, immaginiPath);
+                itemHolder.img.setImageDrawable(arti.Immagine);
+                itemHolder.codice.setText(Integer.toString(arti.Id));
+                itemHolder.nome.setText(arti.Descrizione);
+                itemHolder.categoria.setText("categoria");
+                itemHolder.sottocategoria.setText("Sottocategoria");
+            }
+            return v;
+        }
+    }
+
+    public static Drawable getImmagine(int idArticolo, boolean ridotta, File immaginiPath) {
+
+        Drawable img = null;
+
+        int numero = (int) Math.ceil(Math.random() * 79);
+        //String nomeFile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/EasyCatalogImg/" + Integer.toString(numero + 1) + (ridotta ? "_th.jpg" : ".jpg");
+        //File pathImg = null; //get ((MyApplication) this.getApplication()).getImmaginiPath();
+        File file = new File(immaginiPath, Integer.toString(idArticolo) + (ridotta ? "_th.jpg" : ".jpg"));
+        if (file.exists()) {
+            img = Drawable.createFromPath(file.getAbsolutePath());
+        }
+
+        return img;
+    }
+
 	/*
-	public static Drawable getImmagineLarge(int idArticolo)
+    public static Drawable getImmagineLarge(int idArticolo)
 	{
 		Drawable img=null;
 		int numero = (int)Math.ceil(Math.random()*72);
@@ -233,7 +234,7 @@ public class Adapters {
 
 	
 	/*
-	public static class ImageAdapter extends BaseAdapter {
+    public static class ImageAdapter extends BaseAdapter {
 		private Context context;
 		private Drawable[] images;
 
@@ -296,69 +297,71 @@ public class Adapters {
 	}
 	*/
 
-	public static class BigSpinnerAdapter extends ArrayAdapter<Categoria> implements SpinnerAdapter	
-	{
-		private ArrayList<Categoria> items;
-		private CategoriaHolder categoriaHolder;
-		private Context context;
+    public static class BigSpinnerAdapter extends ArrayAdapter<Categoria> implements SpinnerAdapter {
+        private ArrayList<Categoria> items;
+        private CategoriaHolder categoriaHolder;
+        private Context context;
 
-		private class CategoriaHolder {
-			TextView nome;
-			TextView numero;
-		}
+        private class CategoriaHolder {
+            TextView nome;
+            TextView numero;
+        }
 
-		public BigSpinnerAdapter(Context context, int tvResId,
-				ArrayList<Categoria> items) {
-			super(context, tvResId, items);
-			this.context = context;
-			this.items = items;
-		}
+        public BigSpinnerAdapter(Context context, int tvResId,
+                                 ArrayList<Categoria> items) {
+            super(context, tvResId, items);
+            this.context = context;
+            this.items = items;
+        }
 
-		@Override
-		public View getView(int pos, View convertView, ViewGroup parent) {
-			View v = convertView;
-			if (v == null) {
-				LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-				v = vi.inflate(R.layout.categorie, null);
-				categoriaHolder = new CategoriaHolder();
-				categoriaHolder.nome = (TextView) v.findViewById(R.id.nomeCategoria);
-				categoriaHolder.numero = (TextView) v.findViewById(R.id.articoliCategoria);
-				v.setTag(categoriaHolder);
-			} else
-				categoriaHolder = (CategoriaHolder) v.getTag();
+        @Override
+        public View getView(int pos, View convertView, ViewGroup parent) {
+            View v = convertView;
+            if (v == null) {
+                LayoutInflater vi = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                v = vi.inflate(R.layout.categorie, null);
+                categoriaHolder = new CategoriaHolder();
+                categoriaHolder.nome = (TextView) v.findViewById(R.id.nomeCategoria);
+                categoriaHolder.numero = (TextView) v.findViewById(R.id.articoliCategoria);
+                v.setTag(categoriaHolder);
+            } else
+                categoriaHolder = (CategoriaHolder) v.getTag();
 
-			Categoria cate = items.get(pos);
+            Categoria cate = items.get(pos);
 
-			if (cate != null) {
-				categoriaHolder.nome.setText(cate.Nome);
-				categoriaHolder.numero.setText(Integer.toString(cate.Articoli) + " articoli");
-			}
-			return v;
-		}
-		
-		@Override
-	     public View getDropDownView(int position, View convertView, ViewGroup parent){
-			return getView(position, convertView, parent);
-	     }
+            if (cate != null) {
+                categoriaHolder.nome.setText(cate.Nome);
+                categoriaHolder.numero.setText(Integer.toString(cate.Articoli) + " articoli");
+            }
+            return v;
+        }
 
-	}
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            return getView(position, convertView, parent);
+        }
 
-	public static class Marca {
-		Integer Id;
-		String Nome;
-		Integer Articoli;
+    }
 
-		public Marca(Integer id, String nome, Integer numero) {
-			Id = id;
-			Nome = nome;
-			Articoli = numero;
-		}
+    public static class Marca {
+        Integer Id;
+        String Nome;
+        Integer Articoli;
 
-		@Override
-		public String toString() {
-			return this.Nome;
-		}
+        public Marca(Integer id, String nome, Integer numero) {
+            Id = id;
+            Nome = nome;
+            Articoli = numero;
+        }
 
-	}
+        @Override
+        public String toString() {
+            return this.Nome;
+        }
+
+    }
+
 
 }
+
+

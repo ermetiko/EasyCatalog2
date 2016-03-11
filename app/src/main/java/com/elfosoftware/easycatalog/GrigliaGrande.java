@@ -54,7 +54,7 @@ public class GrigliaGrande extends Fragment{
 		if (main.listaArticoli!=null)
 		{
 			//Adapter adp = new Adapters.ImmagineLargeAdapter(main, R.layout.immagine_large, main.listaArticoli);
-			griglia.setAdapter(new Adapters.ImmagineLargeAdapter(main, R.layout.immagine_large, main.listaArticoli));
+			griglia.setAdapter(new Adapters.ImmagineLargeAdapter(main, R.layout.immagine_large, main.listaArticoli, main.immaginiPath));
 	        int posizione = (getArguments() == null ? -1 : getArguments().getInt("POSIZIONE", -1));
 			if (posizione!=1)
 			{
@@ -68,7 +68,7 @@ public class GrigliaGrande extends Fragment{
 
 	public void caricaGriglia(ArrayList<Articolo> articoli)
 	{
-		griglia.setAdapter(new Adapters.ImmagineLargeAdapter(main, R.layout.immagine_large, articoli));
+		griglia.setAdapter(new Adapters.ImmagineLargeAdapter(main, R.layout.immagine_large, articoli, main.immaginiPath));
 	}
 
 }

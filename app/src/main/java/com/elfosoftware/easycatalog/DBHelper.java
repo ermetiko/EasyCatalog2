@@ -160,7 +160,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     /*
-	public void openDataBase() throws SQLException{
+    public void openDataBase() throws SQLException{
 		 
     	//Open the database
         String myPath = DB_PATH + DB_NAME;
@@ -242,6 +242,21 @@ public class DBHelper extends SQLiteOpenHelper {
 		}
 		*/
         boolean ok = false;
+        /*
+        try {
+            File[] allDir = context.getExternalFilesDirs(null);
+            File fl = new File(allDir[1], "prova.txt");
+            //File fl = new File(context.getExternalFilesDir(null), "prova.txt");
+            OutputStream os = new FileOutputStream(fl);
+            os.write(13);
+            os.flush();
+            os.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        */
+        //String pathSD = Environment.getExternalStorageState();
+
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             String inFileName = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/easycatalogimg.zip";
             File file = new File(inFileName);

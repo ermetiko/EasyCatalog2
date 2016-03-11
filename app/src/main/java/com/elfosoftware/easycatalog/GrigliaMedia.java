@@ -46,7 +46,7 @@ public class GrigliaMedia extends Fragment{
 		
 		if (main.listaArticoli!=null)
 			
-			griglia.setAdapter(new Adapters.ThumbsAdapter(main, R.layout.thumb, main.listaArticoli));
+			griglia.setAdapter(new Adapters.ThumbsAdapter(main, R.layout.thumb, main.listaArticoli, main.immaginiPath));
 	}
 
 	
@@ -74,7 +74,7 @@ public class GrigliaMedia extends Fragment{
 			db.close();
 		}
 		*/
-		griglia.setAdapter(new Adapters.ThumbsAdapter(main, R.layout.thumb, articoli));
+		griglia.setAdapter(new Adapters.ThumbsAdapter(main, R.layout.thumb, articoli, main.immaginiPath ));
 	}
 
 }

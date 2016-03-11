@@ -106,7 +106,7 @@ public class ListaCatalogo extends Fragment {
 			while (crs.moveToNext())
 			{
 				int idArticolo = crs.getInt(0);
-				articoli.add(new Adapters.Articolo(idArticolo , crs.getString(1),  (cnt++ <100 ? Adapters.getImmagine(idArticolo, true):null), null));
+				articoli.add(new Adapters.Articolo(idArticolo , crs.getString(1),  (cnt++ <100 ? Adapters.getImmagine(idArticolo, true, main.immaginiPath):null), null));
 			}
 		}
 		catch(Exception e) {

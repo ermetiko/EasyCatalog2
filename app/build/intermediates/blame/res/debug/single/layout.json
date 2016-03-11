@@ -1,35 +1,35 @@
 [
     {
-        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\categorie.xml",
-        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\categorie.xml"
-    },
-    {
         "merged": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\categorie.xml",
         "source": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\src\\main\\res\\layout\\categorie.xml"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\categorie.xml",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\categorie.xml"
     },
     {
         "merged": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listacatalogo.xml",
         "source": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\src\\main\\res\\layout\\listacatalogo.xml"
     },
     {
-        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\immagine_large.xml",
-        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\immagine_large.xml"
-    },
-    {
         "merged": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menucontatore.xml",
         "source": "C:\\Users\\canfra00\\AndroidStudioProjects\\EasyCatalog2\\app\\src\\main\\res\\layout\\menucontatore.xml"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\immagine_large.xml",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\immagine_large.xml"
     },
     {
         "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listacatalogo.xml",
         "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\listacatalogo.xml"
     },
     {
-        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menucontatore.xml",
-        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\menucontatore.xml"
-    },
-    {
         "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\thumb.xml",
         "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\thumb.xml"
+    },
+    {
+        "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\menucontatore.xml",
+        "source": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\src\\main\\res\\layout\\menucontatore.xml"
     },
     {
         "merged": "C:\\Users\\canfra00\\StudioProjects\\EasyCatalog\\app\\build\\intermediates\\res\\merged\\debug\\layout\\grigliamedia.xml",
