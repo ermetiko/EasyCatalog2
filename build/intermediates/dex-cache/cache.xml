@@ -1,3 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\canfra00\StudioProjects\EasyCatalog2\app\libs\commons-net-3.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="2298164a7c2484406f2aa5ac85b205d39019896f">
+        <dex dex="C:\Users\canfra00\StudioProjects\EasyCatalog2\app\build\intermediates\pre-dexed\debug\commons-net-3.1_02f7df3a5fdf7f6a1b483bef83e55bbb93984f64.jar" />
+    </item>
+    <item
+        jar="C:\Users\canfra00\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\canfra00\StudioProjects\EasyCatalog2\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0_8a5bc64e2d81da08995ca30333d2b4d812c092d8.jar" />
+    </item>
+
+</items>

@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
     <GridView
         android:id="@+id/grigliaMedia"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
-        android:columnWidth="360px"
+        android:background="#eeeeee"
+        android:columnWidth="150dp"
         android:gravity="center_horizontal"
         android:numColumns="auto_fit"
-        android:verticalSpacing="10dp" />
+        android:verticalSpacing="1dp"
+        android:padding="3dp"/>
+
 
 </LinearLayout>

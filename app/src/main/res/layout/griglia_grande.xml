@@ -7,9 +7,10 @@
         android:id="@+id/grigliaGrande"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff"
+        android:background="#eeeeee"
         android:gravity="center_horizontal"
         android:numColumns="1"
-        android:verticalSpacing="10dp" />
+        android:verticalSpacing="5dp"
+        android:padding="3dp"/>
 
 </LinearLayout>
